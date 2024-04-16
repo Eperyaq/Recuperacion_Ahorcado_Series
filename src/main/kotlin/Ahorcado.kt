@@ -20,16 +20,15 @@ class Ahorcado(val numIntentos:Int = 5) {
            palabraOcultada.add("_")
            palabraSinOcultar.add("$letra")
        }
-        palabraOcultada.joinToString(" ")
+        consola.mostrarInfo(palabraOcultada.joinToString(" "))
 
         val letraMetida = consola.pedirCadena("Intenta con una letra: ")
 
 
 
-        for (letra in palabraSinOcultar){
-            if (letraMetida in palabraSinOcultar){
-                print("Hola")
-            }
+        for (i in 1..palabraSinOcultar.size ){ //Aqui estan los indices peta
+            if (letraMetida == palabraSinOcultar[i])
+                palabraOcultada[i] = letraMetida
         }
 
 
