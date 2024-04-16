@@ -7,12 +7,8 @@ class Ahorcado(val numIntentos:Int = 5) {
     private val palabraRandom = Palabra().obtenerPalabraAleatoria() //Palabra random escogida
 
     fun jugar() {
-        while (true) {
             println(palabraRandom)
             println(ocultarPalabra())
-            buscarPalabra()
-        }
-
 
     }
 
@@ -28,21 +24,16 @@ class Ahorcado(val numIntentos:Int = 5) {
 
         val letraMetida = consola.pedirCadena("Intenta con una letra: ")
 
-        if (letraMetida in palabraSinOcultar){
-            palabraOcultada.size
-        }
 
-    }
 
-    private fun buscarPalabra(){
-
-        val letras = mutableListOf<String>()
-
-        for (letra in palabraRandom){
-            letras.add("$letra")
+        for (letra in palabraSinOcultar){
+            if (letraMetida in palabraSinOcultar){
+                print("Hola")
+            }
         }
 
 
     }
+    
 
 }
