@@ -54,9 +54,10 @@ object GeneradorSerie {
      */
     fun generarSerieCreciente(numero: Int){
         var total = 0
-        var suma = 0
+
 
         for (i in 0 until (numero2 - numero + 1)) {
+            var suma = 0
             for (j in 0..i) {
                 val num = numero + j
                 suma += num
@@ -76,13 +77,14 @@ object GeneradorSerie {
      * @param numero Numero que ha introducido el usuario
      */
     fun generarSerieDecreciente(numero: Int){
-        var contador = 1
-        var total = 0
-        var suma = 0
+        var contador = 1 //Contador de las filas
+        var total = 0 //Suma total total total
+
 
         for (i in numero downTo numero1) {
-            consola.mostrarInfo("$contador -> ", false) //muestra el numero de la fila
-            for (j in numero downTo i) { //Desde el numero introducido por el usuario hasta i que es desde el numero del usuario hasta el numero mas pequeño del rango
+            var suma = 0
+            consola.mostrarInfo("$contador -> ", false)
+            for (j in numero downTo i) {
                 suma += j
                 consola.mostrarInfo("$j", false)
                 if (j > i) {
@@ -96,4 +98,26 @@ object GeneradorSerie {
         consola.mostrarInfo("Total => $total")
     }
 
+    /*
+     *Explicacion generar Serie creciente
+     * se incializan las variables
+     * contador, para el contador de las filas
+     * total, para el total de la suma final
+     *
+     * primer for
+     * for (i in numero downTo numero1) -> para i que va a ser un valor en numero(numero escogido por el jugador) hasta numero1(numero random que haya salido en el rango) va a iterar
+     * y cada iteracion va a ir bajandole 1
+     *
+     * se crea la variable suma para ir añadiendo los numeros que se recojan en el segundo bucle for hace la suma de estos,y lo manda a total que es la suma total.
+     * se muestra la primera fila con el contador
+     *
+     * segundo for
+     * for (j in numero downTo i) -> para J que va a ser el valor del numero hasta i que va a ir decrementando tambien
+     * se añade el valor de este a la suma tantas veces como se itere por J, tantos numeros hayan
+     * Y se comprueba si es el ultimo, si lo es, no hace nada, si no lo es, añade un +
+     *
+     * suma 1 al contador
+     * dentro del primer for aun, muestra la suma de los numeros que se hayan añadido
+     * y al final del to do muestra el total con la suma total
+     */
 }
