@@ -6,9 +6,17 @@ class Ahorcado(var numIntentos:Int = 5) {
 
     private val palabraRandom = Palabra().obtenerPalabraAleatoria() //Palabra random escogida
 
+    /**
+     * Inicia el juego del ahorcado
+     */
     fun jugar() {
             ocultarPalabra()
     }
+
+    /**
+     * Funcion que realiza el funcionamiento de juego, esconde la palabra, te pregunta por una letra, si esa letra está acertada te muestra la palabra oculta pero con la letra acertada
+     * te muestra el numero de intentos restantes, etc
+     */
     private fun ocultarPalabra(){
 
         var palabraTerminada = false

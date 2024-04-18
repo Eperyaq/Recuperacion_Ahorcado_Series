@@ -1,4 +1,4 @@
-class GestorMenu(val consola: IGestorConsola):IMenú {
+class GestorMenu(private val consola: IGestorConsola):IMenú {
     override fun mostrarMenu() {
         consola.mostrarInfo("Que desea hacer? \n1.- Generar serie. \n2.- Jugar al ahorcado \n3.- Salir")
         val opcion = consola.pedirEntero("Por favor, seleccione una opcion: ",1,3)
@@ -11,10 +11,10 @@ class GestorMenu(val consola: IGestorConsola):IMenú {
     }
 
     override fun generarSerie() {
-
+        GeneradorSerie.generarSerie() //Se hace asi porque es un object no hace falta instanciar
     }
 
     override fun jugarAhorcado() {
-        Ahorcado().jugar()
+        Ahorcado().jugar() //Instancia unica y momentánea del ahorcado sin crear variable.
     }
 }
