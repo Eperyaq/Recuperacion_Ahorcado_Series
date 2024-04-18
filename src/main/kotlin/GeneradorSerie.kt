@@ -71,6 +71,15 @@ object GeneradorSerie {
         }
         consola.mostrarInfo("Suma => $total")
     }
+    /*
+     *Explicacion de generarSerieCreciente
+     *
+     * se crea la variable total para la suma total
+     * numero2- numero +1 es para determinar la cantidad de lineas que va a tener la serie
+     * se crea la variable suma para hacer las sumas en el momento y mandarsela a total
+     * el segundo for itera entre 0 e i que i es el numero de lineas de la serie
+     * declara la variable num que es la suma de los numeros que hayan salido
+     */
 
     /**
      * Funcion que crea una serie de numeros decreciente y al final te muestra la suma total de numeros
