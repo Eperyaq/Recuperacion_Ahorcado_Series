@@ -7,11 +7,8 @@ class Ahorcado(var numIntentos:Int = 5) {
     private val palabraRandom = Palabra().obtenerPalabraAleatoria() //Palabra random escogida
 
     fun jugar() {
-            println(palabraRandom)
             ocultarPalabra()
-
     }
-
     private fun ocultarPalabra(){
 
         var palabraTerminada = false
