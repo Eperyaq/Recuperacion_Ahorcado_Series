@@ -15,6 +15,6 @@ class GestorMenu(private val consola: IGestorConsola):IMenú {
     }
 
     override fun jugarAhorcado() {
-        Ahorcado().jugar() //Instancia unica y momentánea del ahorcado sin crear variable.
+        Ahorcado(consola).jugar() //Instancia unica y momentánea del ahorcado sin crear variable.
     }
 }

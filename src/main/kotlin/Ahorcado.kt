@@ -1,8 +1,7 @@
 /**
  * Clase que representa el juego del ahorcado
  */
-class Ahorcado(var numIntentos:Int = 5) {
-    val consola = GestorConsola()
+class Ahorcado(private val consola : IGestorConsola, var numIntentos:Int = 5) {
 
     private val palabraRandom = Palabra().obtenerPalabraAleatoria() //Palabra random escogida
 

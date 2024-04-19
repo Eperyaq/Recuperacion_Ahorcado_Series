@@ -128,5 +128,18 @@ object GeneradorSerie {
      * suma 1 al contador
      * dentro del primer for aun, muestra la suma de los numeros que se hayan añadido
      * y al final del to do muestra el total con la suma total
+
      */
+
+        var resul = " "
+        var cont = 1
+        while (num>= min){
+            resul += "${cont.toString().padStart(2,'0')} => "
+            resul += (num downTo min).joinToString("+") + " = "
+            total = (min..num).sumOf{it}
+            res += total.toString + "\n"
+        }
+        resul
+
+
 }
