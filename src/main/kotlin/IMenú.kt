@@ -6,12 +6,12 @@ interface IMenú {
     fun mostrarMenu()
 
     /**
-     *Genera una serie ascendente o descendente dependiendo del numero escogido
+     * Genera una serie ascendente o descendente dependiendo del numero escogido
      */
     fun generarSerie()
 
     /**
-     * Inicia el famoso ahorcado
+     * Inicia el juego del ahorcado
      */
     fun jugarAhorcado()
 

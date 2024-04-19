@@ -1,13 +1,6 @@
 class GestorConsola:IGestorConsola {
 
     /**
-     * Funcion la cual se encarga de dar una pausa y hasta que no se pulse el enter no pasa, se queda en la pausa
-     */
-    override  fun pausa() {
-        this.pedirCadena("\nPulse una tecla para continuar...")
-    }
-
-    /**
      * Funcion la cual muestra un mensaje que sea pasado por parámetros
      * @param mensaje Mensaje o informacion a mostrar
      * @param saltoLinea Un booleano que dependiendo de lo que pongas, tendrá un salto de linea o no
@@ -71,14 +64,6 @@ class GestorConsola:IGestorConsola {
     override fun pedirCadena(mensaje: String): String {
         if (mensaje.isNotBlank()) mostrarInfo(mensaje, false)
         return readln()
-    }
-
-    /**
-     * Limpia la consola metiendo huecos vacios
-     * @param numLineas Numero de lineas a meter para limpiar toda la consola
-     */
-    override fun limpiar(numLineas: Int) {
-        (1..numLineas).forEach { _ -> mostrarInfo("") }
     }
 
 
